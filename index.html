@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RockPaperScessorGame</title>
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+       <div class="logo">Rock Papper Scissor Game</div>   
+    </header>
+
+    <div class="QsAndAn">
+        <label for="rounds">Choose how many rounds you want to play :</label>
+        <select id="rounds" onchange="resetall()">
+          <option value="1">1</option>
+          <option value="4">4</option>
+          <option value="6">6</option>
+        </select>
+    </div>
+    <div class="scoreboard">
+        <h2>Human: <h2 class="human">H</h2></h2>
+        <h2>Computer: <h2 class="computer">C</h2></h2>
+        <h2>Draw: <h2 class="draw">D</h2></h2>
+    </div>
+    <main>
+        <input type="text" id="screen">
+        <div>
+      <img src="fist.png" alt="" class="button" id="Rock">
+      <img src="hand-paper.png" alt="" class="button" id="Paper">
+      <img src="scissors.png" alt="" class="button" id="Scissor">
+    </div>
+    <button class="reset" id="thisisresetbutton">Reset</button>
+    </main>
+    
+    <footer>
+        <p>
+           All Copyright Reserved &copy By RDS;
+        </p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
