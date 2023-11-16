@@ -1,22 +1,37 @@
 let round=document.getElementById("rounds").value;
 let h=0,c=0,d=0;
-
 //You Choose 
 document.querySelectorAll(".button").forEach(function (b) {
     b.addEventListener("click", function (e) {
-        let value = e.target.id;
-        document.querySelector("#screen2").value ="You: "+value;
-        
-        //Computer Choose
-        let users = ["Rock", "Paper", "Scissor"];
-        function getRandomInt(max) {
-            return Math.floor(Math.random() * max);
-        }
-        let comval = users[getRandomInt(users.length)];
-        document.querySelector("#screen3").value ="Computer: "+comval;
+         //Comparison
+            if(round>0){
+            let value = e.target.id;
+        if(value=="Rock"){
+            document.querySelector("#screen2").src="fist.png";
+          }
+          else if(value=="Paper"){
+              document.querySelector("#screen2").src="hand-paper.png";
+          }
+          else{
+              document.querySelector("#screen2").src="scissors.png";
+          }
+            //Computer Choose
+            let users = ["Rock", "Paper", "Scissor"];
+            function getRandomInt(max) {
+                return Math.floor(Math.random() * max);
+            }
+            let comval = users[getRandomInt(users.length)];
+            
+            if(comval=="Rock"){
+                document.querySelector("#screen3").src="fist.png";
+              }
+              else if(comval=="Paper"){
+                  document.querySelector("#screen3").src="hand-paper.png";
+              }
+              else{
+                  document.querySelector("#screen3").src="scissors.png";
+              }
 
-        //Comparison
-        if(round>0){
             switch (value) {
                 case "Rock":
     
@@ -87,8 +102,8 @@ document.querySelectorAll(".button").forEach(function (b) {
                 default:
                     break;
             }
-            round--;
-        }
+    round--;
+ }
         else{
             if(h>c&&(h>=d || h<=d)){
                 alert("You Win");
@@ -98,12 +113,12 @@ document.querySelectorAll(".button").forEach(function (b) {
             }
             else if(h==c){
                 alert("Draw");
-            }     
+            } 
+
         }
+
     })
 })
-
-
 
 document.querySelector(".reset").addEventListener("click", function () {
     resetall();
@@ -111,8 +126,8 @@ document.querySelector(".reset").addEventListener("click", function () {
 
 function resetall(){
     document.querySelector("#screen").value="";
-    document.querySelector("#screen2").value="";
-    document.querySelector("#screen3").value="";
+    document.querySelector("#screen2").src="";
+    document.querySelector("#screen3").src="";
     location.reload();
     console.clear();
 }
@@ -127,7 +142,8 @@ document.querySelector(".computer").innerText=0;
 document.querySelector(".draw").innerText=0;
 
 document.querySelector("#screen").value="";
-document.querySelector("#screen2").value="";
-document.querySelector("#screen3").value="";
+document.querySelector("#screen2").src="";
+document.querySelector("#screen3").src="";
 }
+
 
