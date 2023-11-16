@@ -18,6 +18,7 @@ header{
 header .logo{
     padding: 20px;
 }
+
 .QsAndAn{
     text-align: center;
     width: 25vw;
@@ -35,11 +36,12 @@ header .logo{
     margin: auto;
     margin-top:9vh;
 }
-main{
-    z-index: 1;
+
+.bothscreen{
     background-color: (0,0,0,0.1);
     backdrop-filter: blur(24px);
-    width: 24vw;
+    width: 30vw;
+    height: 20vh;
     text-align: center;
     margin: auto;
     margin-top: 6vh;
@@ -47,7 +49,32 @@ main{
     border-radius: 20px;
 }
 
-main #screen, #screen2, #screen3{
+.bothscreen .human,.machine{
+    font-size:  1.2rem;
+    position: fixed;
+}
+
+
+#screen2, #screen3{
+    width: 6vw;
+    height: auto;
+    margin-top: 40px;
+    margin-left: 60px;
+    text-align: center;
+}
+main{
+    
+    background-color: (0,0,0,0.1);
+    backdrop-filter: blur(24px);
+    width: 24vw;
+    text-align: center;
+    margin: auto;
+    margin-top: 4.2vh;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+main #screen{
     font-size: 1.2rem;
     font-weight:bold;
     width: 20vw;
@@ -58,17 +85,7 @@ main #screen, #screen2, #screen3{
     border: 2px solid black;
     border-radius:9px ;
 }
-main #screen2, #screen3{
-    font-size: 0.9rem;
-    font-weight:bold;
-    width: 10vw;
-    height: 6vh;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-    border: 2px solid black;
-    border-radius:9px ;
-}
+
 main .button{
     margin: 9px;
     min-width: 40px;
@@ -76,13 +93,6 @@ main .button{
 }
 main .button:hover{
 cursor: pointer;
-}
-
-main #Rock{
-    rotate: -45deg;
-}
-main #Scissor{
-    rotate: -32deg;
 }
 
 main .reset{
@@ -113,6 +123,17 @@ footer p{
 }
 
 @media(max-width:1420px){
+    .bothscreen{
+      width: 46vw;
+      height: 24vh;
+  }
+  #screen2, #screen3{
+    width: 9vw;
+    height: auto;
+    margin-top: 40px;
+    margin-left: 60px;
+    text-align: center;
+}
     main {
         width: 46vw;
       }
@@ -120,12 +141,6 @@ footer p{
       main #screen {
         width: 40vw;
       }
-      main #screen2, #screen3{
-        font-size: 0.9rem;
-        font-weight:bold;
-        width: 20vw;
-        height: 6vh;
-    }
       .scoreboard {
         width: 46vw;
     }
@@ -135,7 +150,18 @@ footer p{
 }
 
 
-@media(max-width:720px){
+@media(max-width:760px){
+    .bothscreen{
+       width: 96vw;
+       height: 20vh;
+   }
+   #screen2, #screen3{
+    width: 20vw;
+    height: auto;
+    margin-top: 40px;
+    margin-left: 60px;
+    text-align: center;
+}
     main {
         width: 96vw;
       }
@@ -143,12 +169,6 @@ footer p{
       main #screen {
         width: 90vw;
       }
-      main #screen2, #screen3{
-        font-size: 0.9rem;
-        font-weight:bold;
-        width: 45vw;
-        height: 6vh;
-    }
       .scoreboard {
         width: 96vw;
     }
@@ -156,8 +176,3 @@ footer p{
         width: 96vw;
     }
 }
-
-
-
-
-
