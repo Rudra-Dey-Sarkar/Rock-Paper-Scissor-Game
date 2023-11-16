@@ -13,7 +13,7 @@ header{
     background-color: green;
     color: white;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 2rem;
 }
 header .logo{
     padding: 20px;
@@ -26,9 +26,11 @@ header .logo{
     font-size: 1.2rem;
 }
 .scoreboard {
-    color: white;
-    width: 24vw;
     text-align: center;
+    display: grid;
+    color: white;
+    width: 9vw;
+    font-size: 1.4rem;
     background-color: green;
     margin: auto;
     margin-top:9vh;
@@ -45,7 +47,7 @@ main{
     border-radius: 20px;
 }
 
-main #screen{
+main #screen, #screen2, #screen3{
     font-size: 1.2rem;
     font-weight:bold;
     width: 20vw;
@@ -56,7 +58,17 @@ main #screen{
     border: 2px solid black;
     border-radius:9px ;
 }
-
+main #screen2, #screen3{
+    font-size: 0.9rem;
+    font-weight:bold;
+    width: 10vw;
+    height: 6vh;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius:9px ;
+}
 main .button{
     margin: 9px;
     min-width: 40px;
@@ -100,7 +112,30 @@ footer p{
     padding: 20px;
 }
 
-@media(max-width:460px){
+@media(max-width:1420px){
+    main {
+        width: 46vw;
+      }
+
+      main #screen {
+        width: 40vw;
+      }
+      main #screen2, #screen3{
+        font-size: 0.9rem;
+        font-weight:bold;
+        width: 20vw;
+        height: 6vh;
+    }
+      .scoreboard {
+        width: 46vw;
+    }
+    .QsAndAn{
+        width: 96vw;
+    }
+}
+
+
+@media(max-width:720px){
     main {
         width: 96vw;
       }
@@ -108,6 +143,12 @@ footer p{
       main #screen {
         width: 90vw;
       }
+      main #screen2, #screen3{
+        font-size: 0.9rem;
+        font-weight:bold;
+        width: 45vw;
+        height: 6vh;
+    }
       .scoreboard {
         width: 96vw;
     }
@@ -115,4 +156,7 @@ footer p{
         width: 96vw;
     }
 }
+
+
+
 
