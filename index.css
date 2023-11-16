@@ -21,9 +21,13 @@ header .logo{
 
 .QsAndAn{
     text-align: center;
-    width: 25vw;
+    width: 30vw;
     margin: auto;
     margin-top:9vh;
+    font-size: 1.2rem;
+}
+
+.QsAndAn #rounds{
     font-size: 1.2rem;
 }
 .scoreboard {
