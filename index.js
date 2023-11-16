@@ -112,3 +112,15 @@ function resetall(){
     location.reload();
     console.clear();
 }
+
+function resetdrop(){
+round=document.getElementById("rounds").value;
+console.log(round);
+h=0,c=0,d=0;
+
+document.querySelector(".human").innerText=0;
+document.querySelector(".computer").innerText=0;
+document.querySelector(".draw").innerText=0;
+
+document.querySelector("#screen").value="";
+}
