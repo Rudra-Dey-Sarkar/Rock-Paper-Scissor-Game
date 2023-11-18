@@ -1,13 +1,22 @@
 let round = document.getElementById("rounds").value;
 let h = 0, c = 0, d = 0;
-//You Choose 
 
 document.querySelectorAll(".button").forEach(function (b) {
-    b.addEventListener("click", function (e) {
-        //Comparison
-        
+    b.addEventListener("click", function (e) { 
+        let value = e.target.id;
+        document.querySelector("#screen").value = "";
+        document.getElementById("screen2").style.display="none";
+        document.getElementById("screen3").style.display="none";
+        document.getElementById("loading1").style.display="inline-flex";
+        document.getElementById("loading2").style.display="inline-flex";
+        setTimeout(function(){
+            document.getElementById("screen2").style.display="";
+            document.getElementById("screen3").style.display="";
+            document.getElementById("loading1").style.display="none";
+            document.getElementById("loading2").style.display="none";
+            //Comparison
         if (round > 0) {
-            let value = e.target.id;
+            //You Choose 
             if (value == "Rock") {
                 document.querySelector("#screen2").src = "fist.png";
             }
@@ -18,21 +27,23 @@ document.querySelectorAll(".button").forEach(function (b) {
                 document.querySelector("#screen2").src = "scissors.png";
             }
             //Computer Choose
-            let users = ["Rock", "Paper", "Scissor"];
-            function getRandomInt(max) {
-                return Math.floor(Math.random() * max);
-            }
-            let comval = users[getRandomInt(users.length)];
-
-            if (comval == "Rock") {
-                document.querySelector("#screen3").src = "fist.png";
-            }
-            else if (comval == "Paper") {
-                document.querySelector("#screen3").src = "hand-paper.png";
-            }
-            else {
-                document.querySelector("#screen3").src = "scissors.png";
-            }
+                let users = ["Rock", "Paper", "Scissor"];
+                function getRandomInt(max) {
+                    return Math.floor(Math.random() * max);
+                }
+            
+                let comval = users[getRandomInt(users.length)];
+            
+                if (comval == "Rock") {
+                    document.querySelector("#screen3").src = "fist.png";
+                }
+                else if (comval == "Paper") {
+                    document.querySelector("#screen3").src = "hand-paper.png";
+                }
+                else {
+                    document.querySelector("#screen3").src = "scissors.png";
+                }
+            
 
             switch (value) {
                 case "Rock":
@@ -106,8 +117,11 @@ document.querySelectorAll(".button").forEach(function (b) {
             }
             round--;
         }
+    
         checkwinner();
+    },1500);
     })
+
 })
 
 
