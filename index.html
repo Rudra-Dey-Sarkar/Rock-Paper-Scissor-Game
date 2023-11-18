@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RockPaperScessorGame</title>
+    <title>Rock Paper Scessor Game</title>
 <link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="loading.css">
 </head>
 <body>
     <header>
        <div class="logo">Rock Papper Scissor Game</div>   
     </header>
+
+
 
     <div class="QsAndAn">
         <label for="rounds">Choose How Many Rounds You Want To Play :</label>
@@ -17,6 +20,8 @@
           <option value="1">1</option>
           <option value="4">4</option>
           <option value="6">6</option>
+          <option value="10">10</option>
+          <option value="12">12</option>
         </select>
     </div>
     <div class="scoreboard">
@@ -25,17 +30,41 @@
         <label>Draw: <label class="draw">0</label></label>
     </div>
     <div class="bothscreen">
-       <label class="human">You:</label>
-       <img id="screen2" src="">
-       <label  class="machine">Computer:</label>
-       <img id="screen3" src="">
+            <label class="human">You:</label>
+            <div id="loading1">
+                <div class="dot" style="--delay: 200ms"></div>
+                <div class="dot" style="--delay: 300ms"></div>
+                <div class="dot" style="--delay: 400ms"></div>
+              </div>
+            <img id="screen2">
+
+             <label  class="machine">Computer:</label>
+             <div id="loading2">
+                <div class="dot" style="--delay: 200ms"></div>
+                <div class="dot" style="--delay: 300ms"></div>
+                <div class="dot" style="--delay: 400ms"></div>
+              </div>
+             <img id="screen3">
     </div>
+
     <main>
         <input type="text" id="screen">
-        <div>
-      <img src="fist.png" alt="" class="button" id="Rock">
-      <img src="hand-paper.png" alt="" class="button" id="Paper">
-      <img src="scissors.png" alt="" class="button" id="Scissor">
+        <div class="allbtns">
+
+            <div class="rockbtn">
+                <img src="fist.png" alt="" class="button" id="Rock">
+                <label>Rcok</label>
+            </div>
+
+            <div class="paperbtn">
+                <img src="hand-paper.png" alt="" class="button" id="Paper">
+                <label>Paper</label>
+            </div>
+
+            <div class="scissorbtn">
+                <img src="scissors.png" alt="" class="button" id="Scissor">
+                <label>Scissor</label>
+            </div>
     </div>
     <button class="reset" id="thisisresetbutton">Reset</button>
     </main>
