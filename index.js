@@ -2,12 +2,16 @@ let round = document.getElementById("rounds").value;
 let h = 0, c = 0, d = 0;
 document.getElementById("screen2").style.display="none";
 document.getElementById("screen3").style.display="none";
+document.querySelector(".dispic2").innerText="";
+document.querySelector(".dispic3").innerText="";
 document.querySelectorAll(".button").forEach(function (b) {
     b.addEventListener("click", function (e) { 
         let value = e.target.id;
         document.querySelector("#screen").value = "";
         document.getElementById("screen2").style.display="none";
         document.getElementById("screen3").style.display="none";
+        document.querySelector(".dispic2").innerText="";
+        document.querySelector(".dispic3").innerText="";
         document.getElementById("loading1").style.display="inline-flex";
         document.getElementById("loading2").style.display="inline-flex";
         setTimeout(function(){
@@ -20,12 +24,15 @@ document.querySelectorAll(".button").forEach(function (b) {
             //You Choose 
             if (value == "Rock") {
                 document.querySelector("#screen2").src = "fist.png";
+                document.querySelector(".dispic2").innerText=value;
             }
             else if (value == "Paper") {
                 document.querySelector("#screen2").src = "hand-paper.png";
+                document.querySelector(".dispic2").innerText=value;
             }
             else {
                 document.querySelector("#screen2").src = "scissors.png";
+                document.querySelector(".dispic2").innerText=value;
             }
             //Computer Choose
                 let users = ["Rock", "Paper", "Scissor"];
@@ -37,12 +44,15 @@ document.querySelectorAll(".button").forEach(function (b) {
             
                 if (comval == "Rock") {
                     document.querySelector("#screen3").src = "fist.png";
+                    document.querySelector(".dispic3").innerText=comval;
                 }
                 else if (comval == "Paper") {
                     document.querySelector("#screen3").src = "hand-paper.png";
+                    document.querySelector(".dispic3").innerText=comval;
                 }
                 else {
                     document.querySelector("#screen3").src = "scissors.png";
+                    document.querySelector(".dispic3").innerText=comval;
                 }
             
 
@@ -150,6 +160,8 @@ function resetdrop() {
     document.querySelector("#screen").value = "";
     document.querySelector("#screen2").src = "";
     document.querySelector("#screen3").src = "";
+    document.querySelector(".dispic2").innerText="";
+    document.querySelector(".dispic3").innerText="";
 }
 
 
@@ -158,18 +170,22 @@ function checkwinner() {
         if (h > c && (h >= d || h <= d)) {
             setTimeout(function(){
                 alert("You Win");
+                alert("You have reach end of the round ! reset or choose a new round");
             },25)
         }
         else if (c > h && (c >= d || c <= d)) {
             setTimeout(function(){
                 alert("Computer Win");
+                alert("You have reach end of the round ! reset or choose a new round");
             },25)
             
         }
         else if (h == c) {
             setTimeout(function(){
                 alert("Draw");
+                alert("You have reach end of the round ! reset or choose a new round");
             },25)
         }
     }
 }
+
