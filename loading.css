@@ -1,0 +1,32 @@
+#loading1, #loading2{
+    margin: auto;
+    padding: 4px 0px;
+    width: 42px;
+    display: none;
+    background: #f1f1f1;
+    border-radius: 50px;   
+}
+
+
+#loading1 .dot, #loading2 .dot{
+    height: 10px;
+    width: 10px;
+    opacity: 0.7; 
+    margin: 0 3px; 
+    border-radius: 50%;
+    background: #6c757d;
+    animation: AnimateDots 1.9s var(--delay) ease-in-out infinite;
+}
+
+@keyframes AnimateDots{
+    0%, 44%{
+        transform: translateY(0px);
+    }
+    27%{
+        opacity: 0.4;
+        transform: translateY(-9px);
+    }
+    44%{
+       opacity: 0.2;
+    }
+}
