@@ -43,7 +43,7 @@ header .logo{
 
 .bothscreen{
     width: 24vw;
-    height: 15vh;
+    padding: 9.4px;
     display: flex;
     background-color: (0,0,0,0.1);
     backdrop-filter: blur(24px);
@@ -60,8 +60,10 @@ header .logo{
     margin: auto;
 }
 .display1, .display2{
+    font-size: 1.2rem;
+    
     width: 60px;
-    height: 70px;
+    height: 90px;
     margin: auto;
 }
 
@@ -142,10 +144,9 @@ footer p{
 @media(max-width:1420px){
     .bothscreen{
       width: 46vw;
-      height: 14vh;
   }
   #screen2, #screen3{
-    width: 40px;
+    min-width: 40px;
     height: 70px;
 }
     main {
@@ -166,11 +167,10 @@ footer p{
 
 @media(max-width:760px){
     .bothscreen{
-       width: 96vw;
-       height: 14vh;
+       width: 90vw;
    }
    #screen2, #screen3{
-    width: 40px;
+    min-width: 40px;
     height: 70px;
 }
     main {
