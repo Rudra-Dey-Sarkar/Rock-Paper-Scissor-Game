@@ -42,32 +42,31 @@ header .logo{
 }
 
 .bothscreen{
+    width: 24vw;
+    height: 15vh;
+    display: flex;
     background-color: (0,0,0,0.1);
     backdrop-filter: blur(24px);
-    width: 30vw;
-    height: 20vh;
     text-align: center;
     margin: auto;
     margin-top: 6vh;
     border: 2px solid black;
     border-radius: 20px;
+    justify-content: center;
 }
 
-.bothscreen .human,.machine{
-    font-size:  1.2rem;
-    position: fixed;
+.human, .machine{
+    font-size: 1.2rem;
+    margin: auto;
 }
 
 
 #screen2, #screen3{
-    width: 6vw;
-    height: auto;
-    margin-top: 40px;
-    margin-left: 60px;
-    text-align: center;
+    width: 60px;
+    height: 90px;
+    margin: auto;
 }
 main{
-    
     background-color: (0,0,0,0.1);
     backdrop-filter: blur(24px);
     width: 24vw;
@@ -90,10 +89,20 @@ main #screen{
     border-radius:9px ;
 }
 
+main .allbtns{
+    display: flex;
+    margin: auto;
+}
+
 main .button{
-    margin: 9px;
+   display: flex;
+   margin: auto;
     min-width: 40px;
     height: 70px;
+}
+.rockbtn, .paperbtn, .scissorbtn{
+    font-size: 1.2rem;
+    margin: auto;
 }
 main .button:hover{
 cursor: pointer;
@@ -129,14 +138,11 @@ footer p{
 @media(max-width:1420px){
     .bothscreen{
       width: 46vw;
-      height: 24vh;
+      height: 14vh;
   }
   #screen2, #screen3{
-    width: 9vw;
-    height: auto;
-    margin-top: 40px;
-    margin-left: 60px;
-    text-align: center;
+    width: 40px;
+    height: 70px;
 }
     main {
         width: 46vw;
@@ -157,14 +163,11 @@ footer p{
 @media(max-width:760px){
     .bothscreen{
        width: 96vw;
-       height: 20vh;
+       height: 14vh;
    }
    #screen2, #screen3{
-    width: 20vw;
-    height: auto;
-    margin-top: 40px;
-    margin-left: 60px;
-    text-align: center;
+    width: 40px;
+    height: 70px;
 }
     main {
         width: 96vw;
@@ -180,3 +183,7 @@ footer p{
         width: 96vw;
     }
 }
+
+
+
+
