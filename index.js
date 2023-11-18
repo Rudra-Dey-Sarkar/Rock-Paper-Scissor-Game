@@ -1,6 +1,7 @@
 let round = document.getElementById("rounds").value;
 let h = 0, c = 0, d = 0;
-
+document.getElementById("screen2").style.display="none";
+document.getElementById("screen3").style.display="none";
 document.querySelectorAll(".button").forEach(function (b) {
     b.addEventListener("click", function (e) { 
         let value = e.target.id;
