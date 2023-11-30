@@ -10,7 +10,7 @@ body{
 }
 header{
     position: sticky;
-    background-color: green;
+    background-color: navy;
     color: white;
     text-align: center;
     font-size: 2rem;
@@ -36,7 +36,7 @@ header .logo{
     color: white;
     width: 9vw;
     font-size: 1.4rem;
-    background-color: green;
+    background-color: navy;
     margin: auto;
     margin-top:9vh;
 }
@@ -133,7 +133,7 @@ footer{
     text-align: center;
     position: relative;
     top: 100vh;
-    background-color: green;
+    background-color: navy;
     color: white;
 }
 
