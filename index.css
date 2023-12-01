@@ -130,16 +130,37 @@ main .button:active {
 
 
 footer{
+    margin-top: 25px;
+    padding-top: 25px;
     text-align: center;
     position: relative;
-    top: 100vh;
     background-color: navy;
     color: white;
 }
+.social-media{
+    text-align: center;
+    margin: 2%;
+}
+.social-media a{
+    font-size: 1.2rem;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    margin: 6px;
+    padding: 6px;
 
+}
+
+.social-media a:hover{
+    background-color: white;
+    color: navy;
+}
 footer p{
     padding: 20px;
 }
+
+
 
 @media(max-width:1420px){
     .bothscreen{
